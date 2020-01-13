@@ -4,8 +4,14 @@ import "./Panel.css";
 
 export default class Panel extends Component {
   onChange = event => {
-    // sent out just the numbers
-    this.props.onChange(event.target.value.replace(/\D/g, ""));
+    let ex = /^\d*(\.\d{0,2})?$/;
+    if (ex.test(event.target.value) == false) {
+      event.target.value = event.target.value.substring(
+        0,
+        event.target.value.length - 1
+      );
+    }
+    this.props.onChange(event.target.value);
   };
 
   render() {

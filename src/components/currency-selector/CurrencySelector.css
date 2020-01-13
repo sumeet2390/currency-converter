@@ -3,6 +3,8 @@
   padding: 20px 10px;
   display: flex;
   justify-content: center;
+  position: relative;
+  cursor: pointer;
 }
 
 .CurrencySelector select {
@@ -14,18 +16,23 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  /* position: absolute; */
+  cursor: pointer;
   top: 0;
   left: 10px;
   bottom: 0;
   right: 0;
   min-width: 140px;
+  z-index: 99;
 }
 
 .arrow {
   width: 30px;
+  position: absolute;
+  top: 15px;
+  z-index: 0;
+  cursor: pointer;
 }
 
 .arrow img {
-  width: 100%;
+  width: 30px;
 }
