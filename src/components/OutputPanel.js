@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { SELECTIONS } from "../constants/constants";
-import { updateOutput } from "../actions/actions";
+import { updateOutput, updateFocus } from "../actions/actions";
 import Panel from "./Panel";
 
 const mapStateToProps = state => {
@@ -14,6 +14,9 @@ const mapDispatchToProps = dispatch => {
   return {
     onChange: value => {
       dispatch(updateOutput(value));
+    },
+    onFocus: value => {
+      dispatch(updateFocus(SELECTIONS.OUT));
     }
   };
 };

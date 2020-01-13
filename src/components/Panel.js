@@ -14,6 +14,10 @@ export default class Panel extends Component {
     this.props.onChange(event.target.value);
   };
 
+  onFocus = event => {
+    this.props.onFocus();
+  };
+
   render() {
     return (
       <div
@@ -27,6 +31,7 @@ export default class Panel extends Component {
           value={this.props.value}
           type="text"
           className="input"
+          onFocus={this.onFocus}
         />
       </div>
     );
@@ -35,6 +40,7 @@ export default class Panel extends Component {
 
 Panel.propTypes = {
   onChange: PropTypes.func.isRequired,
+  onFocus: PropTypes.func.isRequired,
   selected: PropTypes.bool.isRequired,
   value: PropTypes.any.isRequired
 };

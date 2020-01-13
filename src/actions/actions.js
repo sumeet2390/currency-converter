@@ -27,12 +27,17 @@ export const updateRates = () => {
   };
 };
 
-export const updateInput = input => {
+export const updateFocus = focusArea => {
   return dispatch => {
     dispatch({
       type: CHANGE_SELECTED,
-      selected: SELECTIONS.IN
+      selected: focusArea
     });
+  };
+};
+
+export const updateInput = input => {
+  return dispatch => {
     dispatch({
       type: CHANGE_INPUT,
       input
@@ -46,11 +51,6 @@ export const updateInput = input => {
 
 export const updateOutput = output => {
   return dispatch => {
-    dispatch({
-      type: CHANGE_SELECTED,
-      selected: SELECTIONS.OUT
-    });
-
     dispatch({
       type: CHANGE_OUTPUT,
       output
