@@ -1,0 +1,24 @@
+.header {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 0 50px;
+  align-items: center;
+}
+
+.logo {
+  background: url("./logo.jpg");
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.title {
+  text-align: center;
+  color: #fff;
+}

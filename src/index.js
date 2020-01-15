@@ -28,9 +28,9 @@ const composedEnhancers = compose(
 const store = createStore(rootReducer, initialState, composedEnhancers);
 
 store.dispatch(updateRates());
-// setInterval(() => {
-//     store.dispatch(updateRates());
-// }, 10 * 1000) // refresh every 10 secs
+setInterval(() => {
+  store.dispatch(updateRates());
+}, 10 * 1000); // refresh every 10 secs
 
 ReactDOM.render(
   <Provider store={store}>

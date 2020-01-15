@@ -5,7 +5,7 @@ import "./Panel.css";
 export default class Panel extends Component {
   onChange = event => {
     let ex = /^\d*(\.\d{0,2})?$/;
-    if (ex.test(event.target.value) == false) {
+    if (ex.test(event.target.value) === false) {
       event.target.value = event.target.value.substring(
         0,
         event.target.value.length - 1

@@ -7,6 +7,7 @@ import LiveRateContainer from "./components/LiveRateContainer";
 
 import OutputCurrencyDropdown from "./components/output-currency-dropdown/OutputCurrencyDropdown";
 import InputCurrencyDropdown from "./components/input-currency-dropdown/InputCurrencyDropdown";
+import Header from "./components/header/Header";
 
 const DropdownWithInput = styled.div`
   display: flex;
@@ -18,19 +19,21 @@ const DropdownWithInput = styled.div`
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <LiveRateContainer />
-
-        <DropdownWithInput>
-          <InputCurrencyDropdown />
-          <InputPanel />
-        </DropdownWithInput>
-        <div className="separator"></div>
-        <DropdownWithInput>
-          <OutputCurrencyDropdown />
-          <OutputPanel />
-        </DropdownWithInput>
-      </div>
+      <>
+        <Header />
+        <div className="App">
+          <LiveRateContainer />
+          <DropdownWithInput>
+            <InputCurrencyDropdown />
+            <InputPanel />
+          </DropdownWithInput>
+          <div className="separator"></div>
+          <DropdownWithInput>
+            <OutputCurrencyDropdown />
+            <OutputPanel />
+          </DropdownWithInput>
+        </div>
+      </>
     );
   }
 }

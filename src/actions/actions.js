@@ -10,8 +10,6 @@ import {
 
 import { fetchCurrencies } from "../helpers/currency-api";
 
-import { SELECTIONS } from "../constants/constants";
-
 export const updateRates = () => {
   return dispatch => {
     fetchCurrencies().then(rates =>
