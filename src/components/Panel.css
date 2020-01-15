@@ -1,6 +1,7 @@
 .panel {
   padding: 20px 10px;
   background-color: #eee;
+  width: 70%;
 }
 .active-panel {
   border-radius: 50px;
@@ -18,6 +19,7 @@ input {
   font-size: 50px;
   font-weight: 300;
   padding-right: 20px;
+  width: 100%;
 }
 
 input::placeholder {

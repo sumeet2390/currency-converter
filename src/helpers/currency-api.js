@@ -1,4 +1,4 @@
-const proxyurl = "http://cors-anywhere.herokuapp.com/";
+const proxyurl = "https://cors-anywhere.herokuapp.com/";
 const apiKey = "c90fed8c553b436b8f7e48d0659b6302";
 
 export const fetchCurrencies = () => {
